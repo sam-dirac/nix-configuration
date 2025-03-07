@@ -87,7 +87,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
     ];
   };
 
@@ -105,6 +104,8 @@
     google-chrome
     lazygit
     slack
+    ghostty
+    code-cursor
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
