@@ -104,8 +104,6 @@
     gh
     google-chrome
     lazygit
-    ghostty
-    code-cursor
     slack
   ];
 
