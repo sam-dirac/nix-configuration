@@ -18,7 +18,7 @@
 
   networking.hostName = "dirac-shadow-alpha";
   networking.networkmanager.enable = true;
-  
+
   time.timeZone = "America/New_York";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
@@ -80,7 +80,8 @@
     gh
 
     google-chrome
-    
+    spotify
+
     slack
     ghostty
     code-cursor
