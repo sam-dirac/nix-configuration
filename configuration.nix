@@ -101,11 +101,28 @@
   environment.systemPackages = with pkgs; [
     git
     gh
+
     google-chrome
-    lazygit
+    
     slack
     ghostty
     code-cursor
+    postman
+
+    atuin
+    lazygit
+    lazydocker
+    eza
+    bat
+    fd
+    btop
+    htop
+    cht-sh
+    nushell
+
+    manix
+    nix-search-cli
+    nix-output-monitor
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -204,4 +221,36 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
+
+  # enable and configure zsh, set as default shell
+  programs.zsh = {
+    enable = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+    shellInit = ''
+      eval "$(atuin init zsh)"
+    '';
+  };
+  users.defaultUserShell = pkgs.zsh;
+
+  # enable direnv for automatically activating nix shell in buildos-web
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+  };
+
+  programs.fzf = {
+    keybindings = false;
+  };
+
+  programs.starship = {
+    enable = true;
+  };
+
+  services.atuin = {
+    enable = true;
+  };
 }
