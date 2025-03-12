@@ -98,6 +98,8 @@
     htop
     cht-sh
     nushell
+    neofetch
+    lsof
 
     manix
     nix-search-cli
